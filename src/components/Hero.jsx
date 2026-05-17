@@ -52,7 +52,7 @@ const codeContent = {
     { text: '  console.log("Ready for hire!")', color: 'text-green-400' },
     { text: '})', color: 'text-yellow-400' },
   ],
-  postgres: [
+  postgresSQL: [
     { text: '-- Moen Mburu | Database', color: 'text-gray-500' },
     { text: '', color: '' },
     { text: 'CREATE TABLE skills (', color: 'text-red-400' },
