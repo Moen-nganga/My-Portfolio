@@ -52,7 +52,7 @@ const codeContent = {
     { text: '  console.log("Ready for hire!")', color: 'text-green-400' },
     { text: '})', color: 'text-yellow-400' },
   ],
-  postgresSQL: [
+  postgreSQL: [
     { text: '-- Moen Mburu | Database', color: 'text-gray-500' },
     { text: '', color: '' },
     { text: 'CREATE TABLE skills (', color: 'text-red-400' },
@@ -77,13 +77,13 @@ const codeContent = {
 }
 
 function CodeWindow() {
-  const [activeTab, setActiveTab] = useState('postgres')
+  const [activeTab, setActiveTab] = useState('postgreSQL')
   const [displayedLines, setDisplayedLines] = useState([])
   const [currentLine, setCurrentLine] = useState(0)
   const [currentChar, setCurrentChar] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
 
-  const tabs = ['react', 'node', 'postgres']
+  const tabs = ['react', 'node', 'postgreSQL']
 
   const handleTabClick = (tab) => {
     setActiveTab(tab)
