@@ -120,10 +120,6 @@ export default function Projects() {
                   </AnchorLink>
                 </Div>
 
-                <p className="text-gray-400 text-sm leading-relaxed flex-1">
-                  {repo.description || 'No description provided.'}
-                </p>
-
                 <Div className="flex items-center justify-end">
                   {repo.language && (
                     <Div className="flex items-center gap-1.5">
