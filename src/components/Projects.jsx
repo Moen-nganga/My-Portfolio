@@ -8,19 +8,29 @@ const fallbackRepos = [
   {
     id: 1,
     name: 'Reddit-Automation-Bot',
-    description: 'A bot for automating Reddit interactions and tasks.',
+    description: '',
     html_url: 'https://github.com/Moen-nganga/Reddit-Automation-Bot',
-    stargazers_count: 0,
-    forks_count: 0,
     language: 'JavaScript',
   },
   {
     id: 2,
+    name: 'Marketplace-Ke',
+    description: '',
+    html_url: 'https://github.com/Moen-nganga/Marketplace-Ke',
+    language: 'HTML',
+  },
+  {
+    id: 3,
+    name: 'Chatbot-Extension',
+    description: '',
+    html_url: 'https://github.com/Moen-nganga/Chatbot-Extension',
+    language: 'CSS',
+  },
+  {
+    id: 4,
     name: 'Subreddit-Insights',
-    description: 'Repository for https://replit.com/@moenmburu41/Subreddit-Insights',
+    description: '',
     html_url: 'https://github.com/Moen-nganga/Subreddit-Insights',
-    stargazers_count: 0,
-    forks_count: 0,
     language: 'TypeScript',
   },
 ]
@@ -45,7 +55,7 @@ export default function Projects() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
+    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=4`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) {
