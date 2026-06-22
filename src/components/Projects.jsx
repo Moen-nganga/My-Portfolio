@@ -7,31 +7,31 @@ const GITHUB_USERNAME = 'Moen-nganga'
 const fallbackRepos = [
   {
     id: 1,
-    name: 'Reddit-Automation-Bot',
-    description: '',
-    html_url: 'https://github.com/Moen-nganga/Reddit-Automation-Bot',
-    language: 'JavaScript',
-  },
-  {
-    id: 2,
-    name: 'Marketplace-Ke',
-    description: '',
-    html_url: 'https://github.com/Moen-nganga/Marketplace-Ke',
-    language: 'HTML',
-  },
-  {
-    id: 3,
     name: 'Chatbot-Extension',
     description: '',
     html_url: 'https://github.com/Moen-nganga/Chatbot-Extension',
     language: 'CSS',
   },
   {
-    id: 4,
-    name: 'Subreddit-Insights',
+    id: 2,
+    name: 'Reddit-Scraper',
     description: '',
-    html_url: 'https://github.com/Moen-nganga/Subreddit-Insights',
-    language: 'TypeScript',
+    html_url: 'https://github.com/Moen-nganga/Reddit-Scraper',
+    language: 'JavaScript',
+  },
+  {
+    id: 3,
+    name: 'Marketplace-Ke',
+    description: '',
+    html_url: 'https://github.com/Moen-nganga/Marketplace-Ke',
+    language: 'HTML',
+  },
+  {
+    id: 4,
+    name: 'Metadata-Converter',
+    description: '',
+    html_url: 'https://github.com/Moen-nganga/Metadata-Converter',
+    language: 'JavaScript',
   },
 ]
 
