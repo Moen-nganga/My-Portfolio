@@ -7,29 +7,37 @@ const GITHUB_USERNAME = 'Moen-nganga'
 const fallbackRepos = [
   {
     id: 1,
+    name: 'Devvit App',
+    description: 'A Devvit app designed to protect users from online fraud through flagging scams, and keeping classified database records of past-proven scammers', 
+    html_url: "https://github.com/Moen-nganga/Devvit-Watchlist-App",
+    language: "TypeScript",
+  },
+  {
+    id: 2,
     name: 'Chatbot-Extension',
-    description: '',
+    description: 'An Open Source powered extenstion designed to run on your browser - assist you in doing some quick research, and help you perform simple tasks ',
     html_url: 'https://github.com/Moen-nganga/Chatbot-Extension',
     language: 'CSS',
   },
   {
-    id: 2,
-    name: 'Reddit-Scraper',
-    description: '',
-    html_url: 'https://github.com/Moen-nganga/Reddit-Scraper',
-    language: 'JavaScript',
-  },
-  {
     id: 3,
     name: 'Marketplace-Ke',
-    description: '',
+    description: 'Marketplace Ke is a free peer-to-peer online marketplace that allows registered users in Kenya to post listings for items they wish to sell, or buy items from other local sellers',
     html_url: 'https://github.com/Moen-nganga/Marketplace-Ke',
     language: 'HTML',
   },
   {
     id: 4,
+    name: 'Reddit-Scraper',
+    description: 'A puppeteer browser automation tool created to mimic human-like behaviour, and perform designated actions across Reddit',
+    html_url: 'https://github.com/Moen-nganga/Reddit-Scraper',
+    language: 'JavaScript',
+  },
+  
+  {
+    id: 5,
     name: 'Metadata-Converter',
-    description: '',
+    description: 'A Metadata conversion tool that allows users to change the EXIF thumbnails and ICC profile of images',
     html_url: 'https://github.com/Moen-nganga/Metadata-Converter',
     language: 'JavaScript',
   },
@@ -129,7 +137,9 @@ export default function Projects() {
                     <ExternalLink size={16} />
                   </AnchorLink>
                 </Div>
-
+                <p className="text-gray-400 text-sm leading-relaxed flex-1">
+  {repo.description || 'No description provided.'}
+</p>
                 <Div className="flex items-center justify-end">
                   {repo.language && (
                     <Div className="flex items-center gap-1.5">
