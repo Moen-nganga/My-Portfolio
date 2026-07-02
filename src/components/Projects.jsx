@@ -41,6 +41,14 @@ const fallbackRepos = [
     html_url: 'https://github.com/Moen-nganga/Metadata-Converter',
     language: 'JavaScript',
   },
+
+  {
+    id: 6,
+    name: 'livePDF',
+    description: 'PDF creation and editing tool that runs completely on your browser',
+    html_url: 'https://github.com/Moen-nganga/livePDF',
+    language: 'TypeScript',
+  },
 ]
 
 const Div = ({ children, className }) => <div className={className}>{children}</div>
