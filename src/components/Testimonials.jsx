@@ -39,7 +39,7 @@ export default function Testimonials() {
         >
           <Div className="flex items-center gap-3 mb-4">
             <Div className="h-px w-8 bg-primary" />
-            <Span className="text-primary text-sm font-medium uppercase tracking-wider">Kind Words</Span>
+            <Span className="text-primary text-sm font-medium uppercase tracking-wider">REVIEWS</Span>
           </Div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">Testimonials</h2>
           <p className="text-gray-400 text-lg max-w-xl">

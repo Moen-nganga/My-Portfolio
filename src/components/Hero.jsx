@@ -22,7 +22,7 @@ const codeContent = {
     { text: '  return (', color: 'text-gray-300' },
     { text: '    <motion.div animate={{ opacity: 1 }}>', color: 'text-red-400' },
     { text: '      <h1>Moen Mburu</h1>', color: 'text-gray-300' },
-    { text: '      <p>Frontend Developer</p>', color: 'text-gray-300' },
+    { text: '      <p>Full Stack Developer</p>', color: 'text-gray-300' },
     { text: '      <button onClick={() => setHired(true)}>', color: 'text-gray-300' },
     { text: '        Hire Me', color: 'text-green-400' },
     { text: '      </button>', color: 'text-gray-300' },
@@ -41,7 +41,7 @@ const codeContent = {
     { text: 'app.get("/hire", (req, res) => {', color: 'text-yellow-400' },
     { text: '  const developer = {', color: 'text-gray-300' },
     { text: '    name: "Moen Mburu",', color: 'text-green-400' },
-    { text: '    role: "Frontend Developer",', color: 'text-green-400' },
+    { text: '    role: "Full Developer",', color: 'text-green-400' },
     { text: '    location: "Nairobi, Kenya",', color: 'text-green-400' },
     { text: '    available: true,', color: 'text-green-400' },
     { text: '  }', color: 'text-gray-300' },
@@ -305,6 +305,14 @@ export default function Hero() {
                   ))}
                 </Container>
               </Container>
+              <Container>
+                <p className="text-xs text-gray-600 uppercase tracking-wider mb-2">Automation</p>
+                <Container className="flex flex-wrap gap-2">
+                  {skills.automation.map((skill, i) => (
+                    <Span key={i} className="bg-white/10 text-white text-sm px-3 py-1.5 rounded-lg">{skill}</Span>
+                  ))}
+                </Container>
+              </Container>
             </Container>
           </Container>
 
@@ -315,13 +323,12 @@ export default function Hero() {
             </Container>
             <AnchorLink
               href={`https://mail.google.com/mail/?view=cm&to=${personalInfo.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary hover:bg-primary-dark text-white text-sm px-4 py-2 rounded-lg transition-colors"
-            target="_blank"
-  rel="noopener noreferrer"
-  className="bg-primary hover:bg-primary-dark text-white text-sm px-4 py-2 rounded-lg transition-colors"
->
-  Email Me
-</AnchorLink>
+            >
+              Email Me
+            </AnchorLink>
           </Container>
         </motion.div>
 

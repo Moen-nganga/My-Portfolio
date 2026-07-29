@@ -1,9 +1,9 @@
 export const personalInfo = {
   name: "Moen Mburu",
-  title: "Full-Stack Developer",
+  title: "Full Stack Developer",
   initials: "MM",
   tagline: "Building Beautiful,\nFast Interfaces",
-  bio: "Full-Stack Developer crafting responsive, modern web experiences with clean code and great attention to detail.",
+  bio: "Full Stack Developer specializing in Automation Engineering, Cloud Engineering and creating modern web experiences with clean code and attention to detail.",
   location: "Nairobi, Kenya",
   timezone: "EAT (UTC+3)",
   email: "moenmburu41@gmail.com",
@@ -16,15 +16,16 @@ export const personalInfo = {
 
 export const stats = [
   { label: "Years Experience", value: "3+" },
-  { label: "Projects Completed", value: "15+" },
+  { label: "Projects Completed", value: "13+" },
   { label: "Happy Clients", value: "10+" },
   { label: "Technologies", value: "8+" },
 ]
 
 export const skills = {
-  frontend: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Git"],
+  frontend: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS"],
   backend: ["Node.js", "Django", "Java"],
   database: ["MySQL", "PostgreSQL", "MongoDB"],
+  automation: ["n8n", "Playwright", "Selenium"],
 }
 
 export const services = [
