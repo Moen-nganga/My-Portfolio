@@ -3,7 +3,7 @@ export const personalInfo = {
   title: "Full Stack Developer",
   initials: "MM",
   tagline: "Building Beautiful,\nFast Interfaces",
-  bio: "Full Stack Developer specializing in Automation Engineering, Cloud Engineering and creating modern web experiences with clean code and attention to detail.",
+  bio: "Full Stack Developer specializing in Automation Engineering, and creating modern web experiences with clean code and attention to detail.",
   location: "Nairobi, Kenya",
   timezone: "EAT (UTC+3)",
   email: "moenmburu41@gmail.com",
