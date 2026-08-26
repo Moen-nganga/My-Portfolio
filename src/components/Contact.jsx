@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { personalInfo } from '../data'
-import { Mail, MapPin, Send, MessageCircle } from 'lucide-react'
+import { Mail, MapPin, Send, MessageCircle, Phone } from 'lucide-react'
 
 export default function Contact() {
   const Div = ({ children, className }) => <div className={className}>{children}</div>
@@ -15,6 +15,12 @@ export default function Contact() {
       label: 'Email',
       value: personalInfo.email,
       href: `https://mail.google.com/mail/?view=cm&to=${personalInfo.email}`,
+    },
+    {
+      icon: Phone,
+      label: 'WhatsApp',
+      value: '+254 143 276 404',
+      href: 'https://wa.me/254143276404',
     },
     {
       icon: Send,

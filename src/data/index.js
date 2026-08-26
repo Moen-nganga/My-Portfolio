@@ -24,17 +24,18 @@ export const stats = [
 export const skills = {
   frontend: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Git"],
   backend: ["Node.js", "Django", "Java"],
-  database: ["MySQL", "PostgreSQL", "MongoDB"],
+  database: ["MySQL", "PostgreSQL", "Oracle"],
+  automation: ["n8n", "Playwright", "Puppeteer", "Selenium"],
 }
 
 export const services = [
   {
-    title: "Automation Tools",
-    description: "I build automation tools that simplify tasks and make your workload a whole lot easier.",
+    title: "Creating Automated Workflows",
+    description: "I configure and deploy automated workflows, integrate CI/CD pipelines and build automation tools to help run your ERP and CRM systems.",
     delivery: "2-3 Days Delivery",
     startingPrice: "$200",
     image: "/automation.webp",
-    bestFor: ["Startups", "Social Media Brands", "Business Websites", "Marketing Campaigns"],
+    bestFor: ["Startups", "ERP Systems", "SME's", "CRM Systems"],
   },
   {
     title: "Website Creation",
@@ -42,11 +43,11 @@ export const services = [
     delivery: "1 Week Delivery",
     startingPrice: "$400",
     image: "/webdesign.webp",
-    bestFor: ["E-Commerce", "Businesses", "SMEs", "Landing Pages"],
+    bestFor: ["E-Commerce", "Businesses", "SMEs"],
   },
   {
-    title: "Application Modernization",
-    description: "I transform legacy systems into modern, cloud-native applications built for scale and performance.",
+    title: "Cloud Optimization",
+    description: "I transform application systems into modern, cloud-native systems built for scale and performance.",
     delivery: "1 Week Delivery",
     startingPrice: "$600",
     image: "/modernization.webp",
@@ -57,10 +58,10 @@ export const services = [
 export const process = [
   {
     step: 1,
-    title: "Discovery & Planning",
+    title: "Planning layouts and Frameworks",
     duration: "1-2 Days",
     description: "Understanding your goals, requirements and project scope.",
-    activities: ["Free consultation call", "Requirements gathering", "Timeline estimation"],
+    activities: ["Free consultation call", "Requirements gathering", "Timeline estimation", "Resource Planning"],
     deliverables: ["Project scope", "Timeline", "Investment proposal"],
   },
   {

@@ -305,6 +305,14 @@ export default function Hero() {
                   ))}
                 </Container>
               </Container>
+               <Container>
+                <p className="text-xs text-gray-600 uppercase tracking-wider mb-2">Automation</p>
+                <Container className="flex flex-wrap gap-2">
+                  {skills.automation.map((skill, i) => (
+                    <Span key={i} className="bg-white/10 text-white text-sm px-3 py-1.5 rounded-lg">{skill}</Span>
+                  ))}
+                </Container>
+              </Container>
             </Container>
           </Container>
 
