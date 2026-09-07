@@ -32,12 +32,7 @@ export default function Footer() {
 
           {/* Brand */}
           <Div className="flex flex-col gap-4">
-            <Div className="flex items-center gap-2">
-              <Div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm">
-                {personalInfo.initials}
-              </Div>
-              <Span className="font-semibold text-white">{personalInfo.name}</Span>
-            </Div>
+            <Span className="font-semibold text-white">{personalInfo.name}</Span>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
               {personalInfo.bio}
             </p>

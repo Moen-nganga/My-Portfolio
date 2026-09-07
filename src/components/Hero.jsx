@@ -1,7 +1,17 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { personalInfo, stats, skills } from '../data'
-import { MapPin, Clock, ArrowRight, GitBranch, Send } from 'lucide-react'
+import {
+  MapPinIcon,
+  ClockIcon,
+  ArrowRightIcon,
+  CodeBracketIcon,
+  PaperAirplaneIcon,
+  BoltIcon,
+  CpuChipIcon,
+  CheckCircleIcon,
+  CodeBracketSquareIcon
+} from '@heroicons/react/24/outline'
 
 const Container = ({ children, className }) => <div className={className}>{children}</div>
 const Span = ({ children, className }) => <span className={className}>{children}</span>
@@ -22,7 +32,7 @@ const codeContent = {
     { text: '  return (', color: 'text-gray-300' },
     { text: '    <motion.div animate={{ opacity: 1 }}>', color: 'text-red-400' },
     { text: '      <h1>Moen Mburu</h1>', color: 'text-gray-300' },
-    { text: '      <p>Frontend Developer</p>', color: 'text-gray-300' },
+    { text: '      <p>Full-Stack Developer</p>', color: 'text-gray-300' },
     { text: '      <button onClick={() => setHired(true)}>', color: 'text-gray-300' },
     { text: '        Hire Me', color: 'text-green-400' },
     { text: '      </button>', color: 'text-gray-300' },
@@ -41,7 +51,7 @@ const codeContent = {
     { text: 'app.get("/hire", (req, res) => {', color: 'text-yellow-400' },
     { text: '  const developer = {', color: 'text-gray-300' },
     { text: '    name: "Moen Mburu",', color: 'text-green-400' },
-    { text: '    role: "Frontend Developer",', color: 'text-green-400' },
+    { text: '    role: "Automation Engineer",', color: 'text-green-400' },
     { text: '    location: "Nairobi, Kenya",', color: 'text-green-400' },
     { text: '    available: true,', color: 'text-green-400' },
     { text: '  }', color: 'text-gray-300' },
@@ -174,22 +184,65 @@ function CodeWindow() {
   )
 }
 
+const whyWorkWithMe = [
+  { icon: CodeBracketSquareIcon,
+    title: 'Write Automation scripts',
+    description: 'I configure and deploy Automation scripts that centralize workflows, link various departmental work together, as well as maintain CI/CD pipelines.',
+  },
+  {
+    icon: BoltIcon,
+    title: 'Quick delivery',
+    description: 'I make sure that all your client needs will be delivered promptly, on time, and well adhered to any set deadlines.',
+  },
+  {
+    icon: CheckCircleIcon,
+    title: 'Reliable testable systems',
+    description: 'I also present working prototypes to test out your systems before any deployment is made.',
+  },
+  {
+    icon: CpuChipIcon,
+    title: 'Handle Pipeline integration',
+    description: 'I run and handle the full pipeline, from the Frontend UI to the backend logic.',
+  },
+]
+
+function WhyWorkWithMe() {
+  return (
+    <Container className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col gap-5">
+      <Container>
+        <p className="text-sm text-gray-500 uppercase tracking-wider">Why work with me?</p>
+        <h3 className="text-xl font-bold text-white mt-1">Built by a developer who prioritizes quality code</h3>
+      </Container>
+      <Container className="grid sm:grid-cols-2 gap-4">
+        {whyWorkWithMe.map((item, i) => {
+          const Icon = item.icon
+          return (
+            <Container key={i} className="flex flex-col gap-2">
+              <Container className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
+                <Icon className="h-[18px] w-[18px] text-primary" />
+              </Container>
+              <Span className="text-white font-medium text-sm">{item.title}</Span>
+              <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+            </Container>
+          )
+        })}
+      </Container>
+    </Container>
+  )
+}
+
 export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-24 pb-16 relative overflow-hidden">
 
-      <Container className="absolute inset-0 overflow-hidden pointer-events-none">
-        <Container className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px]" />
-      </Container>
-
-      <Container className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-start relative z-10">
+      <Container className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-stretch relative z-10">
 
         {/* Left Column */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-6 h-full"
         >
           <Container className="flex items-center gap-2 w-fit">
             <Container className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
@@ -212,11 +265,11 @@ export default function Hero() {
 
           <Container className="flex flex-wrap gap-4">
             <Container className="flex items-center gap-2 text-sm text-gray-500">
-              <MapPin size={14} className="text-primary" />
+              <MapPinIcon className="h-3.5 w-3.5 text-primary" />
               {personalInfo.location}
             </Container>
             <Container className="flex items-center gap-2 text-sm text-gray-500">
-              <Clock size={14} className="text-primary" />
+              <ClockIcon className="h-3.5 w-3.5 text-primary" />
               {personalInfo.timezone}
             </Container>
           </Container>
@@ -227,7 +280,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200"
             >
               View My Work
-              <ArrowRight size={16} />
+              <ArrowRightIcon className="h-4 w-4" />
             </AnchorLink>
             <AnchorLink
               href="#contact"
@@ -244,7 +297,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-white transition-colors"
             >
-              <GitBranch size={20} />
+              <CodeBracketIcon className="h-5 w-5" />
             </AnchorLink>
             <AnchorLink
               href={personalInfo.telegram}
@@ -252,8 +305,12 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-white transition-colors"
             >
-              <Send size={20} />
+              <PaperAirplaneIcon className="h-5 w-5" />
             </AnchorLink>
+          </Container>
+
+          <Container className="mt-auto pt-4">
+            <WhyWorkWithMe />
           </Container>
         </motion.div>
 
@@ -323,13 +380,12 @@ export default function Hero() {
             </Container>
             <AnchorLink
               href={`https://mail.google.com/mail/?view=cm&to=${personalInfo.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary hover:bg-primary-dark text-white text-sm px-4 py-2 rounded-lg transition-colors"
-            target="_blank"
-  rel="noopener noreferrer"
-  className="bg-primary hover:bg-primary-dark text-white text-sm px-4 py-2 rounded-lg transition-colors"
->
-  Email Me
-</AnchorLink>
+            >
+              Email Me
+            </AnchorLink>
           </Container>
         </motion.div>
 

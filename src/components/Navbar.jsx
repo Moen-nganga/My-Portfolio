@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react'
-import { personalInfo } from '../data'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
+  { label: 'Work Done', href: '#projects' },
+  { label: 'Services Offered', href: '#services' },
   { label: 'Process', href: '#process' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact Me', href: '#contact' },
 ]
 
 export default function Navbar() {
@@ -32,18 +31,9 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navClass}`}>
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-4 relative flex items-center justify-end">
 
-        <AnchorLink href="#home" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm">
-            {personalInfo.initials}
-          </div>
-          <span className="font-semibold text-white hidden sm:block">
-            {personalInfo.name}
-          </span>
-        </AnchorLink>
-
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map(link => (
             <li key={link.href}>
               <AnchorLink href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
@@ -53,19 +43,21 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <AnchorLink
-          href="#contact"
-          className="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors duration-200"
-        >
-          Hire Me
-        </AnchorLink>
+        <div className="flex items-center gap-4">
+          <AnchorLink
+            href="#contact"
+            className="hidden md:inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white text-sm font-medium px-5 py-2.5 rounded-lg transition-colors duration-200"
+          >
+            Hire Me
+          </AnchorLink>
 
-        <button
-          className="md:hidden text-gray-400 hover:text-white"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          <button
+            className="md:hidden text-gray-400 hover:text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {menuOpen && (

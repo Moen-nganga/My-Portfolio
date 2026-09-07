@@ -1,9 +1,9 @@
 export const personalInfo = {
-  name: "Moen Mburu",
+  name: "MOEN MBURU",
   title: "Full-Stack Developer",
   initials: "MM",
   tagline: "Building Beautiful,\nFast Interfaces",
-  bio: "Full-Stack Developer crafting responsive, modern web experiences with clean code and great attention to detail.",
+  bio: "Full Stack Developer specializing in Automation Engineering and Devops operations.",
   location: "Nairobi, Kenya",
   timezone: "EAT (UTC+3)",
   email: "moenmburu41@gmail.com",
@@ -16,13 +16,12 @@ export const personalInfo = {
 
 export const stats = [
   { label: "Years Experience", value: "3+" },
-  { label: "Projects Completed", value: "15+" },
+  { label: "Projects Worked On", value: "15+" },
   { label: "Happy Clients", value: "10+" },
-  { label: "Technologies", value: "8+" },
 ]
 
 export const skills = {
-  frontend: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Git"],
+  frontend: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS"],
   backend: ["Node.js", "Django", "Java"],
   database: ["MySQL", "PostgreSQL", "Oracle"],
   automation: ["n8n", "Playwright", "Puppeteer", "Selenium"],
@@ -38,7 +37,7 @@ export const services = [
     bestFor: ["Startups", "ERP Systems", "SME's", "CRM Systems"],
   },
   {
-    title: "Website Creation",
+    title: "Website Creation and App Development",
     description: "I make websites for e-commerce platforms, businesses, and SMEs that are fast, responsive and modern.",
     delivery: "1 Week Delivery",
     startingPrice: "$400",
